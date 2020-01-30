@@ -11,13 +11,13 @@ logger = logging.getLogger(__name__)
 
 
 @python_2_unicode_compatible
-class SmlVariable(models.Model):
+class SMLVariable(models.Model):
     sml_variable = models.OneToOneField(Variable, on_delete=models.CASCADE)
     obis_code = models.CharField(default='', max_length=400, help_text='Obis Kennziffer: `1-0.1.8.0*255`')
 
     sensor_type_choices = (
-            ('MT175', 'MT175'),
-            ('Q3MA', 'Q3MA'),
+            ('ISKAR MT175', 'ISKAR MT175'),
+            ('EYS Q3MA', 'EYS Q3MA'),
         ) 
     
     sensor_type = models.CharField(default='', max_length=10, choices=sensor_type_choices)
@@ -27,7 +27,7 @@ class SmlVariable(models.Model):
 
 
 @python_2_unicode_compatible
-class SmlDevice(models.Model):
+class SMLDevice(models.Model):
     sml_device = models.OneToOneField(Device, on_delete=models.CASCADE)
     port = models.CharField(default='/dev/ttyUSB0',max_length=400, blank=True, help_text='serial port')
     device_id = models.CharField(max_length=400,blank=True, help_text='e.g. `1 ISK00 XXXXXXXX`') 
@@ -37,17 +37,4 @@ class SmlDevice(models.Model):
     def __str__(self):
         return self.sml_device.short_name
 
-
-class ExtendedSmlDevice(Device):
-    class Meta:
-        proxy = True
-        verbose_name = 'Sml Device'
-        verbose_name_plural = 'Sml Devices'
-
-
-class ExtendedSmlVariable(Variable):
-    class Meta:
-        proxy = True
-        verbose_name = 'Sml Variable'
-        verbose_name_plural = 'Sml Variables'
 

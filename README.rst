@@ -53,7 +53,13 @@ Add the PyScada sub-app to the installed apps list of Django.
         'pyscada.sml',
         ...
     ]
- 
+
+Migrate Django Instance 
+
+::
+ cd /var/www/pyscada/PyscadaServer/ 
+ sudo -u pyscada python3 manage.py migrate sml
+
 Restart Services
 
 ::

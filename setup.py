@@ -23,7 +23,7 @@ setup(
     author=sml.__author__,
     author_email=sml.__email__,
     name='pyscada-sml',
-    version=gpio.__version__,
+    version=sml.__version__,
     description='SML extension for PyScada a Python and Django based Open Source SCADA System',
     long_description=open(os.path.join(os.path.dirname(__file__), 'README.rst')).read(),
     url='http://www.github.com/gkend/PyScada-SML',

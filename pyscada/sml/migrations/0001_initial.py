@@ -14,33 +14,31 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='ExtendedSmlDevice',
+            name='ExtendedSMLDevice',
             fields=[
             ],
             options={
-                'verbose_name': 'Sml Device',
-                'verbose_name_plural': 'Sml Devices',
+                'verbose_name': 'SML Device',
+                'verbose_name_plural': 'SML Devices',
                 'proxy': True,
                 'indexes': [],
-                'constraints': [],
             },
             bases=('pyscada.device',),
         ),
         migrations.CreateModel(
-            name='ExtendedSmlVariable',
+            name='ExtendedSMLVariable',
             fields=[
             ],
             options={
-                'verbose_name': 'Sml Variable',
-                'verbose_name_plural': 'Sml Variables',
+                'verbose_name': 'SML Variable',
+                'verbose_name_plural': 'SML Variables',
                 'proxy': True,
                 'indexes': [],
-                'constraints': [],
             },
             bases=('pyscada.variable',),
         ),
         migrations.CreateModel(
-            name='SmlDevice',
+            name='SMLDevice',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('port', models.CharField(blank=True, default='/dev/ttyUSB0', help_text='serial port', max_length=400)),

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from pyscada.gpio import PROTOCOL_ID
-from pyscada.gpio.models import SMLDevice
-from pyscada.gpio.models import SMLVariable
+from pyscada.sml import PROTOCOL_ID
+from pyscada.sml.models import SMLDevice
+from pyscada.sml.models import SMLVariable
 from pyscada.admin import DeviceAdmin
 from pyscada.admin import VariableAdmin
 from pyscada.admin import admin_site
