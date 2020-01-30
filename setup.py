@@ -26,7 +26,7 @@ setup(
     version=gpio.__version__,
     description='SML extension for PyScada a Python and Django based Open Source SCADA System',
     long_description=open(os.path.join(os.path.dirname(__file__), 'README.rst')).read(),
-    url='http://www.github.com/trombastic/PyScada', # TODO
+    url='http://www.github.com/gkend/PyScada-SML',
     license='GPL version 3',
     platforms=['OS Independent'],
     classifiers=CLASSIFIERS,
